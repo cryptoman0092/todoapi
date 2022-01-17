@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import java.time.LocalDate;
 
 
 @Entity
@@ -24,8 +23,6 @@ public class TodoList {
     private Long todoId;
     @NotBlank(message = "please add todo header")
     private String todoHeader;
-    @NotBlank(message = "please add todo date")
-    private LocalDate todoDate;
     @NotBlank(message = "please add todo description")
     private String todoDescription;
 
