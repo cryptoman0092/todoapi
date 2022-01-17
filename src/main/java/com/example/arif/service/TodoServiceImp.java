@@ -35,9 +35,6 @@ public class TodoServiceImp implements TodoService{
     @Override
     public TodoList updateTodoById(Long todoId, TodoList todoList) {
         TodoList db=todoRepository.findById(todoId).get();
-        if(Objects.nonNull(todoList.getTodoDate()) && !"".equalsIgnoreCase(String.valueOf(todoList.getTodoDate()))){
-            db.setTodoDate(todoList.getTodoDate());
-        }
         if(Objects.nonNull(todoList.getTodoHeader()) && !"".equalsIgnoreCase(todoList.getTodoHeader())){
             db.setTodoHeader(todoList.getTodoHeader());
         }
